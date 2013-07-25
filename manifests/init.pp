@@ -8,7 +8,7 @@
 # Module specific parameters
 #
 # [*init_enabled*]
-# ENABLED parameter in the init configuration file to wheter start stunnel or 
+# ENABLED parameter in the init configuration file to wheter start stunnel or
 # not. It is 1 by default, therefore, enabled.
 # Can be defined also by the (top scope) variable $stunnel_init_enabled
 #
@@ -72,7 +72,7 @@
 #   Can be defined also by the (top scope) variable $stunnel_template
 #
 # [*init_template*]
-#   Sets the path to the init template to use as content for default init 
+#   Sets the path to the init template to use as content for default init
 #   config file.
 #   If defined, stunnel default init config file has:
 #   content => content("$init_template")
