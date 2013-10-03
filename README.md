@@ -1,15 +1,9 @@
 # Puppet module: stunnel
 
-### NOTE: 
-Still under development but functional passing the .pem file and configuration file as parameter (top or class)
-
-### TODO: 
-* configure firewall
-* configure monitor
-* configure debug mode
-* configure puppi
-
 This is a Puppet module for stunnel based on the second generation layout ("NextGen") of Example42 Puppet Modules.
+
+NOTE: The firewall and monitoring Example42 utility is not fully implemented for this module as stunnel uses more
+than one port. This module is not ready to support multiple ports for monitoring and firewalling yet.
 
 More info and documentation about stunnel in: http://www.stunnel.org
 
