@@ -37,7 +37,8 @@ class stunnel::params {
 
   ### Application related parameters
   $package = $::operatingsystem ? {
-    default => 'stunnel',
+    /(?i:Debian|Ubuntu|Mint)/ => 'stunnel4',
+    default                   => 'stunnel',
   }
 
   $service = $::operatingsystem ? {
