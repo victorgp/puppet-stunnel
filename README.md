@@ -4,7 +4,6 @@
 Still under development but functional passing the .pem file and configuration file as parameter (top or class)
 
 ### TODO: 
-* 100% flexibility for the config file being able to pass any config parameter defined in stunnel documentation through template options
 * configure firewall
 * configure monitor
 * configure debug mode
@@ -51,7 +50,7 @@ For detailed info about the logic and usage patterns of Example42 modules check 
           absent => true
         }
 
-* Enable auditing without without making changes on existing stunnel configuration *files*
+* Enable auditing without making changes on existing stunnel configuration *files*
 
         class { 'stunnel':
           audit_only => true
@@ -83,6 +82,16 @@ For detailed info about the logic and usage patterns of Example42 modules check 
 
         class { 'stunnel':
           template => 'example42/stunnel/stunnel.conf.erb',
+        }
+
+* Injecting content to the template using "options". Note that the template must use "scope.function_options_lookup(['OptionName', 'DefaultValue'])" method
+
+        class { 'stunnel':
+          template => 'example42/stunnel/stunnel.conf.erb',
+          options  => {
+            'sslVersion' => 'SSLv3',
+            'client'     => 'yes'
+          }
         }
 
 * Automatically include a custom subclass
@@ -125,4 +134,4 @@ For detailed info about the logic and usage patterns of Example42 modules check 
 
 ## CONTINUOUS TESTING
 
-Travis {<img src="https://travis-ci.org/example42/puppet-stunnel.png?branch=master" alt="Build Status" />}[https://travis-ci.org/example42/puppet-stunnel]
+Travis {<img src="https://travis-ci.org/victorgp/puppet-stunnel.png?branch=master" alt="Build Status" />}[https://travis-ci.org/victorgp/puppet-stunnel]
