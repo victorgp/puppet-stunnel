@@ -7,7 +7,7 @@ than one port. This module is not ready to support multiple ports for monitoring
 
 More info and documentation about stunnel in: http://www.stunnel.org
 
-Made by Victor Garcia / Tuenti
+Made by Victor Garcia / Tuenti.com
 
 Official site: http://www.example42.com
 
